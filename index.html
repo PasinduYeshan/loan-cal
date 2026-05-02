@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Loan Calculator - Compare Banks</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -42,6 +43,48 @@
       font-size: 14px;
       color: #a5b4fc;
       letter-spacing: 0.5px;
+    }
+
+    .back-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px 8px 10px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 100px;
+      color: #c7d2fe;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .back-home:hover {
+      background: rgba(99, 102, 241, 0.22);
+      border-color: rgba(99, 102, 241, 0.55);
+      transform: translateX(-2px);
+    }
+    .back-home svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+    .back-home-arrow {
+      opacity: 0.6;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+    }
+    @media (max-width: 520px) {
+      .back-home { padding: 7px 12px 7px 8px; font-size: 12px; gap: 8px; }
+      .back-home svg { width: 20px; height: 20px; }
+      .back-home-label { display: none; }
     }
 
     h1 {
@@ -883,6 +926,22 @@
   </style>
 </head>
 <body>
+  <a class="back-home" href="https://yeshandev.com" aria-label="Back to yeshandev.com">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="14" fill="#4a6cc4"/>
+      <path
+        d="M 9.5 9.5 L 16 16.5 L 22.5 9.5 M 16 16.5 L 16 23.5"
+        fill="none"
+        stroke="#f5f3ee"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <span class="back-home-arrow">←</span>
+    <span class="back-home-label">yeshandev.com</span>
+  </a>
+
   <div class="container">
     <!-- Header -->
     <div class="header">
